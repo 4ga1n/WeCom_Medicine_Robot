@@ -48,6 +48,8 @@ def check_today(date):
     if days < 21:
         print(f"吃药了吗？今天吃第{x}周周{y}的药")
         send_notify(f"吃药了吗？今天吃第{x}周周{y}的药", settings.TOUSER)
+        if date.hour < 12:
+            send_notify(f"猪没吃药，今天吃第{x}周周{y}的药", settings.REMIND_USER)
         if y == 5:
             send_notify("记得约看牙的号",settings.TOUSER)
         if days == 0:
