@@ -1,0 +1,7 @@
+*.txt
+.env
+nohup.out
+.pytest_cache
+__pycache__
+ierror.py
+WXBizMsgCrypt3.py
