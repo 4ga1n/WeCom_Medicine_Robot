@@ -26,11 +26,10 @@ def fake_date(date):
     else:
         return date
 
-def need_to_eat(date):
-    today = datetime.datetime.now()
+def need_to_eat(today):
     days = (today - mark_date).days % 28
-    x = math.floor(days/7) + 1
-    y = days % 7 + 1
+    # x = math.floor(days/7) + 1
+    # y = days % 7 + 1
     if days < 21:
         return True
     else:
